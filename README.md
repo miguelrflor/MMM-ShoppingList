@@ -11,8 +11,11 @@ Once you've returned home from the grocery store, you can ask the mirror to clea
 The Shopping List module can be started by triggering your Google Assistant using its listener ("Hey Google", "Ok Google", "Jarvis", etc).  
 
 Followed by either of the three below commands:
-  1.) "Add <item> to the shopping list"
-  2.) "Remove <item> from the shopping list"
-  3.) "Clear the shopping list"
 
-  The commands are rather self-explanatory, but the first two are intended only to handle one item at a time. 
+    1.) "Add <item> to the shopping list"
+  
+    2.) "Remove <item> from the shopping list"
+  
+    3.) "Clear the shopping list"
+
+The commands are self-explanatory, but note that the first two are intended to handle only one item at a time.
