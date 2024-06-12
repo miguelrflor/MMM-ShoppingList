@@ -30,3 +30,13 @@ The commands are self-explanatory, but please note that the first two are meant 
 
     cd ~MagicMirror/modules
     git clone https://github.com/miguelrflor/MMM-ShoppingList.git
+
+# Configuration
+    {
+        module: "MMM-ShoppingList",
+        position: "top_left", // Adjust the position as needed
+        header: "Shopping List",
+        config: {
+				columnCount: 3
+        }
+    },
