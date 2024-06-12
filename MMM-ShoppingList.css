@@ -1,0 +1,18 @@
+.module.MMM-ShoppingList .module-content {
+   /* column-count: 1;  Adjust the number of columns as needed */
+    column-gap: 10px; /* Adjust the gap between columns as needed */
+}
+
+.module.MMM-ShoppingList ul {
+  /*  list-style-type: none;  Remove default list styles */
+    padding-left: 20px; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.module.MMM-ShoppingList li {
+    margin-bottom: 10px; /* Adjust the space between list items */
+}
+
+.module.MMM-ShoppingList ul li {
+    font-size: 20px; /* Adjust the font size as needed */
+}
