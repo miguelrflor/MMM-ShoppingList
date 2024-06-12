@@ -18,4 +18,7 @@ Followed by either of the three below commands:
   
     3.) "Clear the shopping list"
 
-The commands are self-explanatory, but note that the first two are intended to handle only one item at a time.
+The commands are self-explanatory, but please note that the first two are meant to handle only one item at a time.
+
+# Screenshots
+
