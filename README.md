@@ -18,7 +18,12 @@ Followed by either of the three below commands:
   
     3.) "Clear the shopping list"
 
-The commands are self-explanatory, but please note that the first two are meant to handle only one item at a time.
+The commands are self-explanatory, but please note that the first two are meant to handle only one item at a time. The module will write to a JSON file (shoppingList.json) and store each item in a string array. This module utilizes a local HTTP web server using Node.js. 
+
+The server uses port 3000, so if your Raspberry PI has a local address of 127.0.0.1, you would access the list at 127.0.0.1:3000. Or you can just open a web browser and type "http://localhost:3000/". 
+
+The server can be launched manually by going to ~/MagicMirror/modules/MMM-ShoppingList/WebServer and typing node WebServer.js in the terminal. You should see the following message **Server running at http://localhost:3000/
+**
 
 # Screenshots
 
@@ -37,6 +42,6 @@ The commands are self-explanatory, but please note that the first two are meant 
         position: "top_left", // Adjust the position as needed
         header: "Shopping List",
         config: {
-				columnCount: 3
+		columnCount: 3
         }
     },
