@@ -22,3 +22,11 @@ The commands are self-explanatory, but please note that the first two are meant 
 
 # Screenshots
 
+![Shopping List](https://github.com/miguelrflor/MMM-ShoppingList/raw/master/Screenshots/ShoppingList_Empty.png)
+
+![Shopping List](https://github.com/miguelrflor/MMM-ShoppingList/raw/master/Screenshots/ShoppingList_Items.png)
+
+# Installation
+
+    cd ~MagicMirror/modules
+    git clone 
