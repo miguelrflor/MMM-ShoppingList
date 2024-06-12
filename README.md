@@ -29,4 +29,4 @@ The commands are self-explanatory, but please note that the first two are meant 
 # Installation
 
     cd ~MagicMirror/modules
-    git clone 
+    git clone https://github.com/miguelrflor/MMM-ShoppingList.git
