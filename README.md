@@ -26,6 +26,36 @@ The server can be launched manually by going to ~/MagicMirror/modules/MMM-Shoppi
 
 You should see the following message _**Server running at http://localhost:3000/**_
 
+# Automating Web Server and MagicMirror start
+
+To integrate the Node.js web server into your MMM-ShoppingList module to run in the background whenever you start your Magic Mirror, you can create a script that starts both the Magic Mirror and the web server. 
+
+1.) Create a Script: Create a script file (e.g., start.sh) in your Magic Mirror directory.
+
+2.) Edit the Script: Edit the script to start both the Magic Mirror and the Node.js web server. The script should first start the web server using node WebServer.js and then start the Magic Mirror using npm start. Make sure to use the appropriate paths.
+
+Heres what the script may look like
+
+	#!/bin/bash
+
+	# Start the Node.js web server for the shopping list
+	cd /home/<yourUsername>/MagicMirror/modules/MMM-ShoppingList/WebServer
+	node WebServer.js &
+
+	# Start the Magic Mirror
+	cd ~/MagicMirror
+	DISPLAY=:0 npm start
+
+
+
+3.) Make the script executable 
+
+	chmod +x start.sh
+
+4.) Now start your mirror using the following
+
+	pm2 start <yourScriptName>
+
 # Screenshots
 
 ![Shopping List](https://github.com/miguelrflor/MMM-ShoppingList/raw/master/Screenshots/ShoppingList_Empty.png)
