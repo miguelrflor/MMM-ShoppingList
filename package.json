@@ -1,0 +1,14 @@
+{
+  "name": "MMM-ShoppingList",
+  "version": "1.0.0",
+  "description": "Magic Mirror module for managing a shopping list with PDF export functionality.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelrflor/MMM-ShoppingList.git"
+  },
+  "author": "Miguel Flores",
+  "license": "MIT",
+  "dependencies": {
+    "pdfkit": "^0.12.3"
+  }
+}
