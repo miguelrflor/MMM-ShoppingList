@@ -1,11 +1,16 @@
 const http = require('http');
 const fs = require('fs');
 const pdfkit = require('pdfkit');
+const os = require('os'); 
+const path = require('path'); 
 
 const server = http.createServer((req, res) => {
     if (req.url === '/download' || req.url === '/download?') {
+        // Dynamically construct the file path using os.homedir()
+        const filePath = path.join(os.homedir(), 'MagicMirror/modules/MMM-ShoppingList/shoppingList.json');
+
         // Read the shopping list JSON file
-        fs.readFile('/home/miguel/MagicMirror/modules/MMM-ShoppingList/shoppingList.json', (err, data) => {
+        fs.readFile(filePath, (err, data) => {
             if (err) {
                 console.error('Error reading JSON file:', err);
                 res.writeHead(500, { 'Content-Type': 'text/plain' });
@@ -31,7 +36,7 @@ const server = http.createServer((req, res) => {
 
                 // Add items as a list
                 doc.moveDown();
-                doc.fontSize(12); //Set the items font size
+                doc.fontSize(12); // Set the items font size
                 shoppingList.forEach((item, index) => {
                     doc.text(`${index + 1}. ${item}`);
                 });
