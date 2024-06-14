@@ -1,4 +1,4 @@
-/* MagicMirrorÂ²
+/* MagicMirror²
  * Module: MMM-ShoppingList
  *
  * By [Miguel Flores]
@@ -7,10 +7,11 @@
 const NodeHelper = require('node_helper');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 
 module.exports = NodeHelper.create({
     shoppingList: [],
-    filePath: path.resolve(__dirname, 'shoppingList.json'),
+    filePath: path.join(os.homedir(), 'MagicMirror/modules/MMM-ShoppingList/shoppingList.json'),
 
     start: function () {
         this.sendSocketNotification('GET_SHOPPING_LIST');
@@ -58,7 +59,7 @@ module.exports = NodeHelper.create({
         });
     },
 
-	removeItemFromShoppingList: function (item) {
+    removeItemFromShoppingList: function (item) {
         const index = this.shoppingList.indexOf(item);
         if (index !== -1) {
             this.shoppingList.splice(index, 1);
